@@ -248,22 +248,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppProviders", function() { return AppProviders; });
 /* harmony import */ var _services_conversation_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./services/conversation.service */ "./src/app/services/conversation.service.ts");
 /* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
-/* harmony import */ var _environments_environment_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../environments/environment.model */ "./src/environments/environment.model.ts");
-/* harmony import */ var _configs_api_details_service_interface__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configs/api-details-service.interface */ "./src/app/configs/api-details-service.interface.ts");
-/* harmony import */ var _configs_api_details_service_prod__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./configs/api-details.service.prod */ "./src/app/configs/api-details.service.prod.ts");
-/* harmony import */ var _configs_api_details_service_local__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./configs/api-details.service.local */ "./src/app/configs/api-details.service.local.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _configs_api_details_service_test__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./configs/api-details.service.test */ "./src/app/configs/api-details.service.test.ts");
-/* harmony import */ var _configs_login_details_service_interface__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./configs/login-details-service.interface */ "./src/app/configs/login-details-service.interface.ts");
-/* harmony import */ var _configs_login_details_service_local__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./configs/login-details.service.local */ "./src/app/configs/login-details.service.local.ts");
-/* harmony import */ var _configs_login_details_service_prod__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./configs/login-details.service.prod */ "./src/app/configs/login-details.service.prod.ts");
-/* harmony import */ var _configs_login_details_service_test__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./configs/login-details.service.test */ "./src/app/configs/login-details.service.test.ts");
-
-
-
-
-
-
+/* harmony import */ var _configs_api_details_service_interface__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./configs/api-details-service.interface */ "./src/app/configs/api-details-service.interface.ts");
+/* harmony import */ var _configs_api_details_service_prod__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./configs/api-details.service.prod */ "./src/app/configs/api-details.service.prod.ts");
+/* harmony import */ var _configs_login_details_service_interface__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./configs/login-details-service.interface */ "./src/app/configs/login-details-service.interface.ts");
+/* harmony import */ var _configs_login_details_service_prod__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./configs/login-details.service.prod */ "./src/app/configs/login-details.service.prod.ts");
 
 
 
@@ -274,18 +262,8 @@ var providers = [
     _services_conversation_service__WEBPACK_IMPORTED_MODULE_0__["ConversationService"],
     _services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]
 ];
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_6__["environment"].type === _environments_environment_model__WEBPACK_IMPORTED_MODULE_2__["EnviromentType"].prod) {
-    providers.push({ provide: _configs_api_details_service_interface__WEBPACK_IMPORTED_MODULE_3__["IApiDetailsServiceToken"], useClass: _configs_api_details_service_prod__WEBPACK_IMPORTED_MODULE_4__["ApiDetailsServiceProd"] });
-    providers.push({ provide: _configs_login_details_service_interface__WEBPACK_IMPORTED_MODULE_8__["ILoginDetailsServiceToken"], useClass: _configs_login_details_service_prod__WEBPACK_IMPORTED_MODULE_10__["LoginDetailsServiceProd"] });
-}
-else if (_environments_environment__WEBPACK_IMPORTED_MODULE_6__["environment"].type === _environments_environment_model__WEBPACK_IMPORTED_MODULE_2__["EnviromentType"].test) {
-    providers.push({ provide: _configs_api_details_service_interface__WEBPACK_IMPORTED_MODULE_3__["IApiDetailsServiceToken"], useClass: _configs_api_details_service_test__WEBPACK_IMPORTED_MODULE_7__["ApiDetailsServiceTest"] });
-    providers.push({ provide: _configs_login_details_service_interface__WEBPACK_IMPORTED_MODULE_8__["ILoginDetailsServiceToken"], useClass: _configs_login_details_service_test__WEBPACK_IMPORTED_MODULE_11__["LoginDetailsServiceTest"] }); // Are we need Test Env for this ?
-}
-else {
-    providers.push({ provide: _configs_api_details_service_interface__WEBPACK_IMPORTED_MODULE_3__["IApiDetailsServiceToken"], useClass: _configs_api_details_service_local__WEBPACK_IMPORTED_MODULE_5__["ApiDetailsServiceLocal"] });
-    providers.push({ provide: _configs_login_details_service_interface__WEBPACK_IMPORTED_MODULE_8__["ILoginDetailsServiceToken"], useClass: _configs_login_details_service_local__WEBPACK_IMPORTED_MODULE_9__["LoginDetailsServiceLocal"] });
-}
+providers.push({ provide: _configs_api_details_service_interface__WEBPACK_IMPORTED_MODULE_2__["IApiDetailsServiceToken"], useClass: _configs_api_details_service_prod__WEBPACK_IMPORTED_MODULE_3__["ApiDetailsServiceProd"] });
+providers.push({ provide: _configs_login_details_service_interface__WEBPACK_IMPORTED_MODULE_4__["ILoginDetailsServiceToken"], useClass: _configs_login_details_service_prod__WEBPACK_IMPORTED_MODULE_5__["LoginDetailsServiceProd"] });
 var AppProviders = [
     providers
 ];
@@ -953,45 +931,6 @@ var IApiDetailsServiceToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["In
 
 /***/ }),
 
-/***/ "./src/app/configs/api-details.service.local.ts":
-/*!******************************************************!*\
-  !*** ./src/app/configs/api-details.service.local.ts ***!
-  \******************************************************/
-/*! exports provided: ApiDetailsServiceLocal */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiDetailsServiceLocal", function() { return ApiDetailsServiceLocal; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ApiDetailsServiceLocal = /** @class */ (function () {
-    function ApiDetailsServiceLocal() {
-        this.apiUrl = 'http://localhost:53306/';
-    }
-    ApiDetailsServiceLocal.prototype.getApiUrl = function () {
-        return this.apiUrl;
-    };
-    ApiDetailsServiceLocal = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [])
-    ], ApiDetailsServiceLocal);
-    return ApiDetailsServiceLocal;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/configs/api-details.service.prod.ts":
 /*!*****************************************************!*\
   !*** ./src/app/configs/api-details.service.prod.ts ***!
@@ -1015,7 +954,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ApiDetailsServiceProd = /** @class */ (function () {
     function ApiDetailsServiceProd() {
-        this.apiUrl = 'https://az-wa-de-api.azurewebsites.net/';
+        this.apiUrl = '/';
     }
     ApiDetailsServiceProd.prototype.getApiUrl = function () {
         return this.apiUrl;
@@ -1025,45 +964,6 @@ var ApiDetailsServiceProd = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], ApiDetailsServiceProd);
     return ApiDetailsServiceProd;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/configs/api-details.service.test.ts":
-/*!*****************************************************!*\
-  !*** ./src/app/configs/api-details.service.test.ts ***!
-  \*****************************************************/
-/*! exports provided: ApiDetailsServiceTest */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiDetailsServiceTest", function() { return ApiDetailsServiceTest; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ApiDetailsServiceTest = /** @class */ (function () {
-    function ApiDetailsServiceTest() {
-        this.apiUrl = 'https://az-wa-de-hrbot.azurewebsites.net/';
-    }
-    ApiDetailsServiceTest.prototype.getApiUrl = function () {
-        return this.apiUrl;
-    };
-    ApiDetailsServiceTest = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [])
-    ], ApiDetailsServiceTest);
-    return ApiDetailsServiceTest;
 }());
 
 
@@ -1083,53 +983,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 var ILoginDetailsServiceToken = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('.login-details-service.interface');
-
-
-/***/ }),
-
-/***/ "./src/app/configs/login-details.service.local.ts":
-/*!********************************************************!*\
-  !*** ./src/app/configs/login-details.service.local.ts ***!
-  \********************************************************/
-/*! exports provided: LoginDetailsServiceLocal */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginDetailsServiceLocal", function() { return LoginDetailsServiceLocal; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../environments/environment */ "./src/environments/environment.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var LoginDetailsServiceLocal = /** @class */ (function () {
-    function LoginDetailsServiceLocal() {
-        this.adalConfig = {
-            tenant: _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].tenant,
-            clientId: _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].clientId,
-            redirectUri: _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].redirectUri,
-            navigateToLoginRequestUrl: _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].navigateToLoginRequestUrl,
-            cacheLocation: _environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].cacheLocation
-        };
-    }
-    LoginDetailsServiceLocal.prototype.getLoginDetails = function () {
-        return this.adalConfig;
-    };
-    LoginDetailsServiceLocal = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [])
-    ], LoginDetailsServiceLocal);
-    return LoginDetailsServiceLocal;
-}());
-
 
 
 /***/ }),
@@ -1182,61 +1035,6 @@ var LoginDetailsServiceProd = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], LoginDetailsServiceProd);
     return LoginDetailsServiceProd;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/configs/login-details.service.test.ts":
-/*!*******************************************************!*\
-  !*** ./src/app/configs/login-details.service.test.ts ***!
-  \*******************************************************/
-/*! exports provided: LoginDetailsServiceTest */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginDetailsServiceTest", function() { return LoginDetailsServiceTest; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var LoginDetailsServiceTest = /** @class */ (function () {
-    function LoginDetailsServiceTest() {
-        this.adalConfig = {
-            tenant: "f10e34fe-8994-4b52-a7da-4f7aa9068ca0",
-            clientId: "1f4ea795-d5e5-4b84-af3a-f52a1d85eab5",
-            // redirectUri: "https://az-wa-de-hrbot.azurewebsites.net/home/",
-            redirectUri: this.getOrigin() + window.location.pathname,
-            navigateToLoginRequestUrl: false,
-            cacheLocation: 'localStorage'
-        };
-    }
-    LoginDetailsServiceTest.prototype.getLoginDetails = function () {
-        return this.adalConfig;
-    };
-    LoginDetailsServiceTest.prototype.getOrigin = function () {
-        if (!window.location.origin) {
-            var port = window.location.port ? ':' + window.location.port : '';
-            return window.location.protocol + '//' + window.location.hostname + port;
-        }
-        else {
-            return window.location.origin;
-        }
-    };
-    LoginDetailsServiceTest = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
-        __metadata("design:paramtypes", [])
-    ], LoginDetailsServiceTest);
-    return LoginDetailsServiceTest;
 }());
 
 
@@ -1534,14 +1332,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
 
 
 
-
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
-}
+Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
 Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"]);
 
 
