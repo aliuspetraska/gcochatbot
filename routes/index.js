@@ -96,10 +96,17 @@ const postMessage = (text, context, store) => {
   });
 };
 
-router.get('/Conversation/initConversation', middleware.authorization, (req, res) => {
-  const token = decodeToken(req.header('authorization'));
+const getName = bearer => {
+  const token = decodeToken(bearer);
+  const givenName = R.pathOr(undefined, ['given_name'], token);
+  const name = R.pathOr(undefined, ['name'], token);
+  return givenName || name;
+};
 
-  postMessage('', { name: R.pathOr(undefined, ['given_name'], token) }, false)
+router.get('/Conversation/initConversation', middleware.authorization, (req, res) => {
+  const name = getName(req.header('authorization'));
+
+  postMessage('', { name: name }, false)
     .then(result => {
       res.status(200).json(result);
     })
