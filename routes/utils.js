@@ -40,6 +40,14 @@ const outputMessage = result => {
     });
   });
 
+  if (messageAnswers.length === 0) {
+    messageAnswers.push({
+      responseType: 'text',
+      text: 'Error Occurred. Something is wrong with the conversation.',
+      answerId: uuidv1(),
+    });
+  }
+
   return {
     messageAnswers: messageAnswers,
     conversationId: R.pathOr(0, ['context', 'conversation_id'], result),
