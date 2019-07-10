@@ -110,10 +110,11 @@ router.get('/Conversation/initConversation', middleware.authorization, (req, res
 
 router.post('/Conversation/message', middleware.authorization, (req, res) => {
   const conversationId = req.body['conversationId'] || 0;
-  const context = memostore.get(conversationId) || {};
+
+  const store = memostore.get(conversationId) || {};
   const text = req.body['text'] || '';
 
-  postMessage(text, context, true)
+  postMessage(text, R.pathOr({}, ['context'], store), true)
     .then(result => {
       res.status(200).json(result);
     })
