@@ -1,0 +1,81 @@
+.chatWindow .acidjs-rating-stars,
+.chatWindow .acidjs-rating-stars label::before {
+  display: inline-block;
+}
+
+.chatWindow .acidjs-rating-stars * {
+  margin: 0;
+  padding: 0;
+}
+
+.chatWindow .acidjs-rating-stars input {
+  display: none;
+}
+
+.chatWindow .acidjs-rating-stars {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.chatWindow .acidjs-rating-stars label {
+  color: #333333;
+}
+
+.chatWindow .acidjs-rating-stars label::before {
+  content: "\e126";
+  width: 20px;
+  line-height: 22px;
+  text-align: center;
+
+  font-size: 22px;
+}
+
+.chatWindow .acidjs-rating-disabled {
+  opacity: 0.5;
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  pointer-events: none;
+}
+
+.chatWindow .no-hover {
+}
+
+.chatWindow .thumbUp {
+  background: transparent;
+  font-size: 22px;
+  border: none;
+  color: #1d821f;
+  margin-right: 5px;
+  outline: none;
+}
+.chatWindow button[disabled].thumbUp {
+  background: transparent !important;
+  font-size: 22px !important;
+  border: none !important;
+  color: #1d821f !important;
+  margin-right: 5px !important;
+  outline: none !important;
+}
+.chatWindow .thumbDown {
+  background: transparent;
+  font-size: 22px;
+  border: none;
+  color: #d01212;
+  outline: none;
+}
+.chatWindow button[disabled].thumbDown {
+  background: transparent !important;
+  font-size: 22px !important;
+  border: none !important;
+  color: #d01212 !important;
+  outline: none !important;
+}
+.chatWindow .thumbUp:focus {
+  outline: none;
+}
+.chatWindow .thumbDown:focus {
+  outline: none;
+}
+.chatWindow .grey-thumb {
+  color: #c1c1c1 !important;
+}

@@ -1,0 +1,253 @@
+.chatWindow {
+    position: fixed;
+    bottom: -7px;
+    right: 80px;
+    z-index: 2;
+}
+.chatWindow .window {
+    width: 480px;
+    float: left;
+}
+.chatWindow .windowBar {
+    height: 60px;
+    background-color: #044919;
+    border-radius: 10px 10px 0px 0px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.chatWindow .windowContent {
+    background-color: #f0f0f0;
+    height: 385px;
+    overflow-y: scroll;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 82px;
+}
+.chatWindow .windowInput {
+    position: fixed;
+    bottom: 0px;
+    height: 75px;
+    background-color: #fcfcfc;
+    width: 480px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.chatWindow input::placeholder {
+    font-style: italic;
+    color: grey;
+}
+.chatWindow .inputText {
+    width: 85%;
+    border-style: none;
+    background-color: #fcfcfc;
+    display: inline; 
+    padding: 10px;
+    font-size: 13px;
+}
+.chatWindow .botNameBar {
+    color: #fcfcfc;
+    padding: 10px 15px 10px 25px;
+    font-size: 22px;
+}
+.chatWindow .botNameBar:hover {
+    cursor: pointer;
+}
+.chatWindow .botName {
+    color: #fcaa00;
+    font-weight: 600;
+}
+.chatWindow .firstPartName {
+    font-weight: 300;
+}
+.chatWindow .icon {
+    color: #565656;
+    float: right;
+}
+.chatWindow .sendIcon {
+    float: right;
+    padding: 5px;
+    width: 30px;
+    cursor: pointer;
+}
+.chatWindow input:focus {
+    outline: 0;
+}
+.chatWindow .robotman {
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    vertical-align: middle;
+    border-style: none;
+}
+.chatWindow .robot {
+    width: 70px;
+    margin-left: 15px;
+}
+.chatWindow .minimalizeButton {
+    float: right;
+    color: white;
+    text-decoration: inherit;
+    cursor: pointer;
+    padding-right: 25px;
+}
+.chatWindow .minimalizeButton:visited {
+    text-decoration: inherit;
+    color: white;
+    cursor: auto;
+}
+.chatWindow .minimalizeButton:hover {
+    color: white;
+    text-decoration: none;
+}
+.chatWindow .robotImg {
+    height: 35px;
+    width: 35px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 7px;
+    background-color: white;
+}
+.chatWindow .hide-conversation {
+    display: none;
+}
+.chatWindow .windowContent input {
+    font-size: 22px;
+}
+.chatWindow a.button-comment {
+    color: #3c763d;
+    font-size: 14px;
+    border: 1px solid #3c763d;
+    border-radius: 15px 15px 15px 15px;
+    padding: 6px;
+    background-color: #fcfcfc;
+    font-weight: 500;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.2), 0 3px 5px 0 rgba(72, 70, 70, 0.19);
+}
+.chatWindow a.button-comment:hover {
+    text-decoration: none;
+    color: #3c763d;
+}
+.chatWindow .buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.chatWindow .cursor-not-allowed {
+    cursor: not-allowed !important;
+}
+.chatWindow .commentIcon {
+    color: #212529;
+}
+.chatWindow .commentBox {
+    border: 1px solid #e8e0e0;
+    width: 85%;
+    box-shadow: 5px grey;
+    padding: 5px;
+    font-size: 14px !important;
+}
+.chatWindow .sendMail {
+    background: transparent;
+    border: none;
+    color: #4BB131;
+    outline: none;
+    padding: 0px;
+    margin-left: 0px;
+}
+.chatWindow .sendMail:focus {
+    outline: none;
+}
+.chatWindow .yesButton {
+    background: transparent;
+    border: none;
+    color: #4BB131;
+    outline: none;
+}
+.chatWindow .yesButton:focus {
+    outline: none;
+}
+.chatWindow .noButton {
+    background: transparent;
+    border: none;
+    color: #4BB131;
+    outline: none;
+}
+.chatWindow .noButton:focus {
+    outline: none;
+}
+.chatWindow .leaveComment {
+    background: transparent;
+    border: none;
+    color: #4BB131;
+    outline: none;
+    padding: 0px;
+    margin-left: 0px;
+}
+.chatWindow .leaveComment:focus {
+    outline: none;
+}
+.chatWindow .conversationId {
+    font-size: 14px;
+}
+.chatWindow .disabled {
+    cursor: not-allowed !important;
+}
+.chatWindow .windowContent li > button {
+    background: transparent;
+    border: none;
+    color: #4BB131;
+    outline: none;
+    text-align: left;
+}
+.chatWindow .windowContent li > button:focus {
+    outline: none;
+}
+.chatWindow .windowContent img.imgContainer {
+    font-size: 10px;
+    min-height: 40px;
+}
+.chatWindow .sendButton {
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #656464;
+    margin-left: 0px !important;
+    width: 15%;
+    min-width: 0px !important;
+}
+.chatWindow .sendButton:focus {
+    outline: none;
+}
+.chatWindow .bulletpoint {
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: left;
+    display: block;
+}
+.chatWindow .bulletpoint:focus {
+    outline: none;
+}
+.chatWindow .bulletpointText {
+    color: #4BB131;
+    display: inline;
+}
+.chatWindow .bullet {
+    font-size: 7px !important;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #000000;
+}
+.chatWindow .windowContent button {
+    min-width: 0 !important;
+}
+.chatWindow *, ::after, ::before {
+    box-sizing: border-box;
+}
+.chatWindow input[type="button"] {
+    min-width: 0px;
+}
+.chatWindow .fa {
+    background-image: none;
+    padding-left: 0;
+}
