@@ -99,7 +99,7 @@ const postMessage = (text, context, store) => {
 router.get('/Conversation/initConversation', middleware.authorization, (req, res) => {
   const token = decodeToken(req.header('authorization'));
 
-  postMessage('', { name: R.pathOr(undefined, ['given_name'], token) }, true)
+  postMessage('', { name: R.pathOr(undefined, ['given_name'], token) }, false)
     .then(result => {
       res.status(200).json(result);
     })
