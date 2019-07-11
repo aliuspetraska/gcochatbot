@@ -3,6 +3,7 @@ const { decodeToken, outputMessage } = require('./utils');
 const AssistantV1 = require('ibm-watson/assistant/v1');
 const { MemoryStore } = require('./memorystore');
 const middleware = require('./middleware');
+const { Parser } = require('json2csv');
 const config = require('../config');
 const express = require('express');
 const uuidv1 = require('uuid/v1');
@@ -158,6 +159,35 @@ router.post('/Rating/comment', middleware.authorization, async (req, res) => {
   });
 
   res.status(200).json({});
+});
+
+router.get('/Export/csv', async (req, res) => {
+  const fields = ['conversationId', 'answerId', 'rating', 'question', 'comment', 'timestamp'];
+  const json2csvParser = new Parser({ fields });
+
+  const querySpec = { query: `SELECT * FROM container c` };
+
+  cosmos.database(config.database).container(config.container).items.query(querySpec, { enableCrossPartitionQuery:true }).toArray()
+    .then(result => {
+      const rows = [];
+
+      result['result'].forEach(row => {
+        rows.push({
+          conversationId: row['conversationId'],
+          answerId: row['answerId'],
+          rating: row['rating'] !== -1 ? row['rating'] : '',
+          question: row['question'],
+          comment: row['comment'] !== null ? row['comment'] : '',
+          timestamp: moment.unix(row['timestamp']).format(),
+        });
+      });
+
+      res.attachment('export.csv');
+      res.status(200).send(json2csvParser.parse(rows));
+    })
+    .catch(error => {
+      res.status(400).json({});
+    });
 });
 
 module.exports = router;
