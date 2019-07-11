@@ -7,6 +7,6 @@ module.exports = {
   username: '46fb7720-2b75-48e8-86b9-2bdeea9ac163',
   password: 'eDckceOX0SFn',
   url: 'https://gateway-fra.watsonplatform.net/assistant/api',
-  workspaceId: '19b4eb45-2cb2-4a47-a55f-c23986dd95ff',
+  workspaceId: '8d3a93ec-8322-4ae8-bc89-eeb3e316dd6f',
   expirationTime: 86400000,
 };
