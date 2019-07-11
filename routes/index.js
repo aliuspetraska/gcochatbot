@@ -21,8 +21,9 @@ const cosmos = new CosmosClient({
 const memostore = new MemoryStore();
 const assistant = new AssistantV1({
   version: config.version,
-  iam_apikey: config.iam_apikey,
-  url: config.url
+  username: config.username,
+  password: config.password,
+  url: config.url,
 });
 
 const findItem = answerId => {
